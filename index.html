@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Book</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'PerfectoCalligraphy';
+            src: url('fonts/PerfectoCalligraphy.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        .calligraphy-title {
+            font-family: 'PerfectoCalligraphy', cursive;
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            padding-left: 10px;
+        }
+        
+        .letter-content {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+            padding: 0 20px;
+            overflow: hidden;
+            max-height: 100%;
+            box-sizing: border-box;
+        }
+        
+        .letter-content p {
+            margin-bottom: 10px;
+        }
+        
+        .first-paragraph {
+            text-indent: 1.5em;
+        }
+        
+       
+        .back-cover-title {
+            font-family: 'PerfectoCalligraphy', cursive;
+            font-size: 4.8rem; 
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .back-cover-comment {
+            font-size: 1.5rem;
+            text-align: center;
+            font-style: italic;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="book-container">
+            <div class="arrow arrow-left" onclick="prevPage()">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            
+            <div class="book" id="book">
+                <div class="cover" id="cover">
+                    <div class="cover-content">
+                        <h1 class="cover-title">still figuring out</h1>
+                        <h2 class="cover-author">sola</h2>
+                    </div>
+                </div>
+             
+            </div>
+            
+            <div class="arrow arrow-right" onclick="nextPage()">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+        
+        <div class="player-container" id="playerContainer">
+            <div class="record-player">
+                <div class="vinyl-container">
+                    <div class="vinyl" id="vinyl"></div>
+                    <div class="vinyl-center"></div>
+                </div>
+                
+                <div class="song-info">
+                    <div class="song-name" id="songName">Song Name</div>
+                    <div class="artist-name" id="artistName">Artist Name</div>
+                    <div class="time-info" id="timeInfo">[0:00] — [0:00]</div>
+                    <div class="progress-bar" id="progressBarContainer">
+                        <div class="progress" id="progressBar"></div>
+                    </div>
+                </div>
+                
+                <div class="controls">
+                    <div class="play-pause" id="playPauseBtn">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/book.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/toggle.js"></script>
+    <script src="js/protection.js"></script>
+</body>
+</html>
